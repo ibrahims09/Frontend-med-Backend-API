@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db" // SQLite-fil som kommer skapas lokalt
+}
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+}
+ 
+
+
